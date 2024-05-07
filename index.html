@@ -1,0 +1,32 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Generate a <span style="color:#55f991"><br>random password</span></h1>
+        <h2>Never use an insecure password again!</h2>
+        <div>
+            <p id="length">Length: <span style="color:#55f991" id="slidernumber">5</span></p>
+            <input type="range" min="6" max="12" value="6" class="slider" id="myRange">
+             <!-- Desta vez, é aqui que a mágica acontece, não no JS. O JS vai só transmitir os valores que serão definidos aqui, para os demais elementos, como o mostrador do tamanho da senha e redefinir a variável de tamanho da senha. -->
+        </div>
+        <div id="enable">
+        <button id="symbols" onclick="enableSymbols()"> Enable symbols </button>
+        <button id="numbers" onclick="enableNumbers()"> Enable numbers </button>
+        </div>
+        <div>
+        <button id="generatepassword" onclick="renderKeys()"> Generate keys </button>
+        <button id="clear" onclick="clearFields()"> Clear fields </button>
+        </div>
+        <hr></hr>
+        <!-- É como faz a linha!! -->
+        <div class="bar">
+            <p id="passwords-elone"></p>
+            <p id="passwords-eltwo"></p>
+        </div>    
+        <script src="index.js"></script>
+    </body>
+</html>
+
+<!-- Span, Title and Input Slider -->
+<!-- My mind is a little bit foggy right now, I had a rough night and little sleep so I was going to study about checkboxes, now, instead, I'm going to use just toggle buttons, so I can move foward on the course (post. ref.: https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/ & https://www.w3schools.com/jsref/dom_obj_checkbox.asp) -->

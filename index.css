@@ -1,0 +1,92 @@
+/* 
+Eu ainda preciso entender como funciona o redimensionamento da página, quando ajustada manualmente.
+
+Also, para background: https://stackoverflow.com/questions/31590722/prevent-background-layout-from-stretching
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+*/
+
+@font-face {
+    src: url("Fonts/Roboto-Thin.ttf");
+    font-family: rbthin;
+}
+
+@font-face {
+    src: url("Fonts/Roboto-Regular.ttf");
+    font-family: rbregular;
+}
+
+body {
+    width: 350px; 
+    /*
+    to fix the position (https://www.quora.com/How-do-you-make-elements-not-move-when-resizing-your-browser-window-in-HTML-CSS#:~:text=You%20can%20make%20elements%20not,an%20element%20to%20%22fixed%22.) 
+    */
+    line-height: 25px;
+    background-color: #02080d;
+    color: white;
+    /* background-color: teal; */
+    margin: 40px;
+}
+
+h1 {
+    color: whitesmoke;   
+    text-shadow: 0px 1px 2px black;
+    font-family: rbregular
+}
+
+h2 {
+    line-height: 20px;
+    font-family: rbthin;
+    font-size: 22px;
+}
+
+p {
+    font-family: rbthin;
+    font-weight: bold;
+}
+
+#length {
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    color: white;
+    font-family: rbthin;
+    font-weight: bold;
+}
+
+#enable {
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 15px;
+    border: 1px solid #253240;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#passwords-elone, #passwords-eltwo {
+    border: 2px solid ;
+    /* gainsboro */
+    width: 120px;
+    background-color: transparent;
+    padding: 3px;
+    text-align: center;
+    line-height: 25px;
+    height: 25px;
+    color: #55f991;
+    font-size: 12px; 
+}
+
+.ctc {
+    display: flex;
+    justify-content: space-around;
+}

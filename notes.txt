@@ -1,0 +1,42 @@
+1) FORMA BASEADA NA PESQUISA À WEB:
+
+function copyToClipboard () {
+    let copyText = ""
+    navigator.clipboard.writeText(copyText.value)
+    alert("Copied the text: " + copyText.value)
+}
+
+passwordsElOne.addEventListener("click", copyToClipboard(copyText = document.getElementById("passwords-elone")))
+passwordsElTwo.addEventListener("click", copyToClipboard(copyText = document.getElementById("passwords-eltwo")))
+
+Porém dava algum erro e o código era executado prematuramente, sem antes de eu criar o evento de clique, ao realmente clicar nas senhas e o resultado era inválido (dava erro de "focused").
+
+
+
+2) FORMA BASEADA NO CHAT GPT:
+
+function copyToClipboard (texto) {
+    navigator.clipboard.writeText(texto).then(() => {alert("Copied the text: " + texto)})
+    .catch(err => {console.error("Erro ao copiar texto:".err)})
+}
+
+passwordsElOne.addEventListener("click", function(){copyToClipboard(passwordsElOne.textContent)})
+passwordsElTwo.addEventListener("click", function(){copyToClipboard(passwordsElTwo.textContent)})
+
+Tentei procurar saber o que tava dando errado, através do meu amigo, o Chat, e funcionava até, porém, além de ter funções a mais (coisas que eu não aprendi ainda, mas entendi), ele não gerava resultado, dava "undefined".
+
+Então, eu adaptei o código (e tô super feliz com isso!!) E DEU CERTO!!! Abaixo!
+
+
+3) Código adaptado por mim:
+
+function copyToClipboard (texto) {
+    navigator.clipboard.writeText(texto)
+    alert("Copied the text: " + texto)
+}
+
+passwordsElOne.addEventListener("click", function(){copyToClipboard(passwordsElOne.textContent)})
+passwordsElTwo.addEventListener("click", function(){copyToClipboard(passwordsElTwo.textContent)})
+
+Sucesso!! Foi uma experiência legal, não posso negar, embora eu ficasse com um constante "feeling" de estar perdendo meu tempo mas eu acho que até que foi recompensante.
+
